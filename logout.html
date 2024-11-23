@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>退出登录</title>
+    <link rel="stylesheet" href="/My-web/styles.css">
+</head>
+<body>
+    <script>
+        // 清除登录状态
+        sessionStorage.removeItem("isLoggedIn");
+        alert("已退出登录！");
+        window.location.href = "/My-web/login.html"; // 跳转回登录页面
+    </script>
+</body>
+</html>

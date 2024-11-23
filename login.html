@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="/My-web/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>登录</h2>
+        <form id="loginForm">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="button" id="loginButton" class="link-button">登录</button>
+        </form>
+        <p class="hint-text">输入 user 123456 先不用注册</p> <!-- 添加提示文字 -->
+        <p>没有账户？<a href="/My-web/register.html">注册</a></p>
+    </div>
+    
+    <script>
+        // 登录按钮点击
+        document.getElementById("loginButton").addEventListener("click", function () {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // 简单验证逻辑（用户名为 "user"，密码为 "123456"）
+            if (username === "user" && password === "123456") {
+                alert("登录成功！");
+                sessionStorage.setItem("isLoggedIn", true); // 在 sessionStorage 中存储登录状态
+                window.location.href = "/My-web/new-blog.html"; // 跳转到新的博客页面
+            } else {
+                alert("用户名或密码错误！");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客页面</title>
+    <link rel="stylesheet" href="/My-web/styles.css">
+</head>
+<body>
+    <script>
+        // 检查是否已登录
+        if (!sessionStorage.getItem("isLoggedIn")) {
+            alert("请先登录！");
+            window.location.href = "login.html"; // 如果未登录，跳转回登录页面
+        }
+    </script>
+
+    <div class="blog-container">
+        <h1>欢迎来到我的博客</h1>
+        <p>以后会在此持续更新我的学习成果和实践经历</p>
+        <a href="/My-web/logout.html" class="link-button">退出登录</a>
+    </div>
+
+    <div class="blog-section">
+        <div id="blog-posts" class="blog-grid">
+            <div class="blog-post">博客文章1</div>
+            <div class="blog-post">博客文章2</div>
+            <div class="blog-post">博客文章3</div>
+            <div class="blog-post">博客文章4</div>
+            <div class="blog-post">博客文章5</div>
+            <div class="blog-post">博客文章6</div>
+            <div class="blog-post">博客文章7</div>
+            <div class="blog-post">博客文章8</div>
+        </div>
+    </div>
+</body>
+</html>
